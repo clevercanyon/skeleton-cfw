@@ -1,0 +1,42 @@
+{
+	"name"              : "clevercanyon/skeleton-cfw",
+	"prefer-stable"     : true,
+	"minimum-stability" : "dev",
+	"config"            : {
+		"platform"      : {
+			"php" : "7.4.0"
+		},
+		"allow-plugins" : {
+			"dealerdirect/phpcodesniffer-composer-installer" : true,
+			"composer/package-versions-deprecated"           : true
+		}
+	},
+	"require"           : {
+		"clevercanyon/utilities" : "dev-main"
+	},
+	"require-dev"       : {
+		"clevercanyon/utilities-dev" : "dev-main"
+	},
+	"scripts"           : {
+		"compile"          : "./vendor/clevercanyon/utilities/dev/cli-tools/composer/compile",
+		"post-install-cmd" : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/utilities/dev/cli-tools/composer/on-post-install-cmd",
+		"post-update-cmd"  : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/utilities/dev/cli-tools/composer/on-post-update-cmd"
+	},
+	"extra"             : {
+		"clevercanyon" : {
+			"$extends-packages" : [ "clevercanyon/utilities" ],
+			"&"                 : {
+				"project" : {
+					"data" : {
+						"version"        : "1.0.0",
+						"stable_tag"     : "1.0.0",
+
+						"layout"         : "cloudflare-worker",
+						"namespace_crux" : "Clever_Canyon\\Skeleton_CFW",
+						"name"           : "{{name: Skeleton Cloudflare Worker}}"
+					}
+				}
+			}
+		}
+	}
+}

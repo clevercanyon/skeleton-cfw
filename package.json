@@ -1,0 +1,27 @@
+{
+    "version": "1.0.0",
+    "license": "GPL-2.0-or-later",
+    "name": "package",
+    "author": {
+        "name": "Clever Canyon",
+        "url": "https://clevercanyon.com"
+    },
+    "devDependencies": {
+        "@clevercanyon/utilities-dev-npm": "latest"
+    },
+    "main": "./src/assets/webpack/index.min.js",
+    "config": {
+        "clevercanyon": {
+            "&": {
+                "webpack": {
+                    "config": {
+                        "target": "webworker"
+                    },
+                    "assetDirs": [
+                        "../../../src/assets"
+                    ]
+                }
+            }
+        }
+    }
+}
