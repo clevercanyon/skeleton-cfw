@@ -26,7 +26,7 @@ command = "composer compile"
 format = "service-worker"
 
 [dev]
-port = 9000
+port = 8787
 ip = "127.0.0.1"
 local_protocol = "http"
 upstream_protocol = "https"
