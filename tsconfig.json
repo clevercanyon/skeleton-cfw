@@ -5,7 +5,7 @@
 		"target"                       : "es6",
 		"module"                       : "es6",
 		"moduleResolution"             : "node",
-		"lib"                          : [ "es6", "webworker" ],
+		"lib"                          : [ "es6" ],
 
 		"strict"                       : true,
 		"allowJs"                      : true,
