@@ -35,7 +35,7 @@ addEventListener( 'fetch', event => {
  *
  * @since 2022-02-26
  *
- * @param request Request.
+ * @param {Request} request Request.
  *
  * @returns {Promise<Response>} Response.
  */

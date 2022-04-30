@@ -4,7 +4,8 @@
 	"compilerOptions" : {
 		"target"                       : "es6",
 		"module"                       : "es6",
-		"lib"                          : [ "es6" ],
+		"moduleResolution"             : "node",
+		"lib"                          : [ "es6", "webworker" ],
 
 		"strict"                       : true,
 		"allowJs"                      : true,
@@ -15,6 +16,10 @@
 		"emitDeclarationOnly"          : true,
 		"isolatedModules"              : true,
 
-		"types"                        : [ "@cloudflare/workers-types" ]
+		"typeRoots"                    : [
+			"./node_modules/@types",
+			"./node_modules/@cloudflare",
+			"./typings"
+		]
 	}
 }
