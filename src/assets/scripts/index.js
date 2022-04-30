@@ -10,7 +10,7 @@
  *
  * @since 2022-02-26
  */
-/* eslint-env worker, es6 */
+/* eslint-env es6, worker */
 
 /**
  * Imports.
