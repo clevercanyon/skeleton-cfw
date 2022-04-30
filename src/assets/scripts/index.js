@@ -4,6 +4,12 @@
  * @since 2022-02-26
  */
 // <editor-fold desc="Imports and other headers.">
+
+/**
+ * Lint configuration.
+ *
+ * @since 2022-02-26
+ */
 /* eslint-env worker, es6 */
 
 /**

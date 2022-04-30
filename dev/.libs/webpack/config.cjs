@@ -66,18 +66,29 @@ module.exports = ( env, argv ) => {
 		if ( fs.existsSync( assetsDir + '/styles/index.scss' ) ) {
 			entryIndexes.push( assetsDir + '/styles/index.scss' );
 		}
-		if ( fs.existsSync( assetsDir + '/scripts/index.js' ) ) {
+		if ( fs.existsSync( assetsDir + '/scripts/index.tsx' ) ) {
+			entryIndexes.push( assetsDir + '/scripts/index.tsx' );
+
+		} else if ( fs.existsSync( assetsDir + '/scripts/index.ts' ) ) {
+			entryIndexes.push( assetsDir + '/scripts/index.ts' );
+
+		} else if ( fs.existsSync( assetsDir + '/scripts/index.jsx' ) ) {
+			entryIndexes.push( assetsDir + '/scripts/index.jsx' );
+
+		} else if ( fs.existsSync( assetsDir + '/scripts/index.js' ) ) {
 			entryIndexes.push( assetsDir + '/scripts/index.js' );
 		}
 		if ( ! entryIndexes.length ) {
 			return; // No entry indexes available.
 		}
 		configs.push( mc.merge( {
-			cache   : false,
-			mode    : 'production',
-			target  : 'browserslist',
-			plugins : [ new miniCss( { filename : '[name].min.css' } ) ],
-			module  : {
+			cache       : false,
+			mode        : 'production',
+			devtool     : 'source-map',
+			target      : 'browserslist',
+			experiments : { topLevelAwait : true },
+			plugins     : [ new miniCss( { filename : '[name].min.css' } ) ],
+			module      : {
 				rules : [
 					{
 						test : /\.(?:txt|md)$/i,
@@ -105,7 +116,7 @@ module.exports = ( env, argv ) => {
 						],
 					},
 					{
-						test    : /\.(?:js|jsx)$/i,
+						test    : /\.(?:js|jsx|ts|tsx)$/i,
 						exclude : [ /\/(?:node_modules\/(?:core-js|webpack\/buildin))\//i ],
 						use     : [
 							{
@@ -118,10 +129,10 @@ module.exports = ( env, argv ) => {
 					},
 				],
 			},
-			entry   : {
+			entry       : {
 				index : entryIndexes,
 			},
-			output  : {
+			output      : {
 				path     : assetsDir + '/webpack',
 				filename : '[name].min.js',
 			},

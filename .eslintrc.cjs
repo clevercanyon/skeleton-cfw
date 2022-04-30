@@ -16,21 +16,19 @@ module.exports = {
 		browser : true,
 		es6     : true,
 		jquery  : true,
+		jest    : true,
 	},
+	parser        : '@babel/eslint-parser',
 	parserOptions : {
 		ecmaVersion  : 'latest',
 		sourceType   : 'module',
-		ecmaFeatures : {
-			jsx : true,
-		},
+		ecmaFeatures : { jsx : true },
 		babelOptions : {
 			configFile : './dev/.libs/webpack/babel.cjs',
 		},
 	},
-	parser        : '@babel/eslint-parser',
-
-	extends : [ 'eslint:recommended' ],
-	rules   : {
+	extends       : [ 'eslint:recommended' ],
+	rules         : {
 		'space-unary-ops'           : [
 			'warn',
 			{
@@ -49,4 +47,27 @@ module.exports = {
 		'object-curly-spacing'      : [ 'warn', 'always' ],
 		'computed-property-spacing' : [ 'warn', 'always' ],
 	},
+	overrides     : [
+		{
+			files         : [ '*.{ts,tsx}' ],
+			parser        : '@typescript-eslint/parser',
+			plugins       : [ '@typescript-eslint' ],
+			extends       : [
+				'eslint:recommended',
+				'plugin:@typescript-eslint/recommended',
+				'plugin:@typescript-eslint/recommended-requiring-type-checking',
+			],
+			parserOptions : {
+				tsconfigRootDir : __dirname,
+				project         : './tsconfig.json',
+				ecmaVersion     : 'latest',
+				sourceType      : 'module',
+				ecmaFeatures    : { jsx : true },
+			},
+			rules         : {
+				'@typescript-eslint/require-await'          : [ 'off' ],
+				'@typescript-eslint/triple-slash-reference' : [ 'warn', { 'path' : 'never', 'types' : 'always', 'lib' : 'always' } ],
+			},
+		},
+	],
 };
