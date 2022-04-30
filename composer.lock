@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/utilities.git",
-                "reference": "5f1396ecfe3ca1c8c1a3dbd7cdcac7647329a005"
+                "reference": "aa9f749bfe9e6ff4766c002fdf4f3c0fd463394c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/utilities/zipball/5f1396ecfe3ca1c8c1a3dbd7cdcac7647329a005",
-                "reference": "5f1396ecfe3ca1c8c1a3dbd7cdcac7647329a005",
+                "url": "https://api.github.com/repos/clevercanyon/utilities/zipball/aa9f749bfe9e6ff4766c002fdf4f3c0fd463394c",
+                "reference": "aa9f749bfe9e6ff4766c002fdf4f3c0fd463394c",
                 "shasum": ""
             },
             "require": {
@@ -116,7 +116,7 @@
                 "issues": "https://github.com/clevercanyon/utilities/issues",
                 "source": "https://github.com/clevercanyon/utilities/tree/main"
             },
-            "time": "2022-04-30T14:46:10+00:00"
+            "time": "2022-04-30T15:44:16+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -1587,12 +1587,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/utilities-dev-npm.git",
-                "reference": "4d03891fd9d5ea2d0aa780ef8cbc31471a6720a7"
+                "reference": "40f14f9d9e8208a8b6c43055f53d85d70351adbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/utilities-dev-npm/zipball/4d03891fd9d5ea2d0aa780ef8cbc31471a6720a7",
-                "reference": "4d03891fd9d5ea2d0aa780ef8cbc31471a6720a7",
+                "url": "https://api.github.com/repos/clevercanyon/utilities-dev-npm/zipball/40f14f9d9e8208a8b6c43055f53d85d70351adbf",
+                "reference": "40f14f9d9e8208a8b6c43055f53d85d70351adbf",
                 "shasum": ""
             },
             "default-branch": true,
@@ -1613,7 +1613,7 @@
                 "issues": "https://github.com/clevercanyon/utilities-dev-npm/issues",
                 "source": "https://github.com/clevercanyon/utilities-dev-npm/tree/main"
             },
-            "time": "2022-04-30T02:57:59+00:00"
+            "time": "2022-04-30T15:42:31+00:00"
         },
         {
             "name": "composer/package-versions-deprecated",

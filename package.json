@@ -7,7 +7,9 @@
         "url": "https://clevercanyon.com"
     },
     "devDependencies": {
-        "@clevercanyon/utilities-dev-npm": "latest"
+        "@clevercanyon/utilities-dev-npm": "latest",
+        "@cloudflare/workers-types": "^3.8.0",
+        "@cloudflare/wrangler": "^1.19"
     },
     "main": "./src/assets/webpack/index.min.js",
     "config": {
